@@ -14,7 +14,7 @@ app.include_router(UserRouter, tags=["User"], prefix="/user")
 # Home page
 @app.get("/", tags=["Root"])
 async def read_root():
-    return {"message": "Welcome to this fantastic app!"}
+    return {"message": "Welcome to this fantastic app!", "status":200, "success":True}
 
 # Create queries
 @router.post("/", response_description="user data added into the database")
