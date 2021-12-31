@@ -3,7 +3,7 @@ from typing import Optional
 from pydantic import BaseModel, EmailStr, Field
 
 
-class StudentSchema(BaseModel):
+class UserSchema(BaseModel):
     fullname: str = Field(...)
     email: EmailStr = Field(...)
     course_of_study: str = Field(...)
@@ -22,7 +22,7 @@ class StudentSchema(BaseModel):
         }
 
 
-class UpdateStudentModel(BaseModel):
+class UpdateUserModel(BaseModel):
     fullname: Optional[str]
     email: Optional[EmailStr]
     course_of_study: Optional[str]
