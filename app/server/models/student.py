@@ -1,16 +1,9 @@
+from typing import Optional
+
 from pydantic import BaseModel, EmailStr, Field
-from typing import List, Optional
-
-class Item(BaseModel):
-    name : str
-    email : str
-    age : int
-    languages : List[str]
-    password : str
-    
 
 
-class UserSchema(BaseModel):
+class StudentSchema(BaseModel):
     fullname: str = Field(...)
     email: EmailStr = Field(...)
     course_of_study: str = Field(...)
@@ -29,7 +22,7 @@ class UserSchema(BaseModel):
         }
 
 
-class UpdateUserModel(BaseModel):
+class UpdateStudentModel(BaseModel):
     fullname: Optional[str]
     email: Optional[EmailStr]
     course_of_study: Optional[str]
