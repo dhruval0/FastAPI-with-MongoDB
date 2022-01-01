@@ -36,11 +36,11 @@ jobs:
         
       - name: Ceate viutual evironment
         run: |
-          python3 install virtualenv
+          pip3 install virtualenv
           
       - name: Make env file for python
         run: |
-          pip3 -m venv env
+          python3 -m venv env
           
       - name: Activate venv
         run: |
