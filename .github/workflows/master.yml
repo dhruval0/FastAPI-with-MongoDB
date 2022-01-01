@@ -33,6 +33,14 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.8
+        
+      - name: Ceate viutual evironment
+        run: |
+          python3 install virtualenv
+          
+      - name: Make env file for python
+        run: |
+          pip3 -m venv env
           
       - name: Activate venv
         run: |
