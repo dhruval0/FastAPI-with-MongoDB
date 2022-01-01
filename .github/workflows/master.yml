@@ -52,7 +52,8 @@ jobs:
       
       - name: Start/Restart application
         run: |
-          pm2 start ecosystem.config.js
+          cp ~/.env.dev .env -f
+          pm2 startOrRestart ecosystem.config.js
           pm2 save
       
       - name: Go into non-elevated User
