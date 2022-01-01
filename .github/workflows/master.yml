@@ -44,7 +44,7 @@ jobs:
           
       - name: Activate venv
         run: |
-          source ~/env/bin/activate
+          source env/bin/activate
           
       - name: Install dependencies
         run: |
@@ -52,7 +52,6 @@ jobs:
       
       - name: Start/Restart application
         run: |
-          cp ~/.env.dev .env -f
           pm2 startOrRestart ecosystem.config.js
           pm2 save
       
