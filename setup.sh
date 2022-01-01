@@ -18,6 +18,8 @@ python3 -m venv ~/env
 
 source env/bin/activate
 
+pip3 install -r requirements.txt
+
 cd FastAPI-with-MongoDB/app/
 
 pm2 start ecosystem.config.js
