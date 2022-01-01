@@ -52,7 +52,7 @@ jobs:
       
       - name: Start/Restart application
         run: |
-          python3 main.py
+          python3 app/main.py
       
       - name: Go into non-elevated User
         run: |
