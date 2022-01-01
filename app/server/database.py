@@ -1,12 +1,12 @@
 import motor.motor_asyncio
 from bson.objectid import ObjectId
 
-MONGO_DETAILS = "mongodb://http://18.222.138.190:27017"
+MONGO_DETAILS = "mongodb+srv://spyD:firstdeploy@cluster0.i4urm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 database = client.users
 user_collection = database.get_collection("users_collection")
 
-def user_helper(user) -> dict:
+def user_helper(user) -> dict:  
     return {
         "id": str(user["_id"]),
         "fullname": user["fullname"],
