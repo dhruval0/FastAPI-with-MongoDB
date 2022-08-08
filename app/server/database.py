@@ -1,7 +1,7 @@
 import motor.motor_asyncio
 from bson.objectid import ObjectId
 
-MONGO_DETAILS = "mongodb+srv://spyD:firstdeploy@cluster0.i4urm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+MONGO_DETAILS = "mongodb+srv://mydb:Test123@cluster0.rku4q.mongodb.net/?retryWrites=true&w=majority"
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 database = client.users
 user_collection = database.get_collection("users_collection")
